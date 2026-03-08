@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-driver = webdriver.Edge()
+driver = webdriver.Firefox()
 driver.get("https://the-internet.herokuapp.com/login")
 
 wait = WebDriverWait(driver, 10)
