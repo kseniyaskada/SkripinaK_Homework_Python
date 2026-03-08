@@ -91,3 +91,15 @@ def test_string_utils_delete_symbol_negative(text, symbol, result):
     string_utils = StringUtils()
     res = string_utils.delete_symbol(text, symbol)
     assert res == result
+
+
+@pytest.mark.negative_test
+@pytest.mark.parametrize('text, symbol, result', [
+    ('', 'a', False),
+    ('Hello', 'x', False),
+    ('Test', 'es', True)
+])
+def test_string_utils_contains_negative(text, symbol, result):
+    string_utils = StringUtils()
+    res = string_utils.contains(text, symbol)
+    assert res == result
